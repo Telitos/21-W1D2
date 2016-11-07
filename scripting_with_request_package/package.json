@@ -1,0 +1,21 @@
+{
+  "name": "scripting_with_request_package",
+  "version": "1.0.0",
+  "description": "assignment_2_W2D1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "21-W2D1"
+  },
+  "keywords": [
+    "request"
+  ],
+  "author": "Ghislain",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.78.0"
+  }
+}
