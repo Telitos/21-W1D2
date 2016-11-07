@@ -6,19 +6,22 @@ request.get('https://sytantris.github.io/http-examples/future.jpg', function (er
          if (err) {
           throw err;
         } else if (response.statusCode === 200) {
+          // response.on('data', function(chunk) {
+          // console.log('Downloading image...')
+          // })
           console.log('Download finished!')
          }
        })
        .on('response', function (response) {                           // Note 3
          console.log('Response Status Code: ', response.statusCode);
-         console.log('Response Status Message: ', response.statusMessage)
+         console.log('Response Status Message: ', response.statusMessage);
          console.log('Response Content Type: ', response.headers['content-type'])
 
-         if (response.statusCode === 200) {
-          response.on('data', function(chunk) {
-          console.log('Downloading image...')
-          })
-        }
+         // if (response.statusCode === 200) {
+         //  response.on('data', function(chunk) {
+         //  console.log('Downloading image...')
+         //  })
+        // }
       })
        .pipe(fs.createWriteStream('./downloaded.jpg'));               // Note 4
 
