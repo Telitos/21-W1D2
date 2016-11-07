@@ -15,7 +15,7 @@ function getAndPrintHTML () {
 
     response.setEncoding('utf8');
 
-    response.on('err', function(error){
+    response.on('err', function(err){
       console.log("This is the error:", err)
     })
 

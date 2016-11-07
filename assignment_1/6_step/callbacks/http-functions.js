@@ -12,7 +12,7 @@ module.exports = function getHTML (options, callback) {
 
     response.setEncoding('utf8');
 
-    response.on('err', function(error) {
+    response.on('err', function(err) {
       console.log("An error occurred:", err)
     })
 
