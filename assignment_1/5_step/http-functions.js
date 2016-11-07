@@ -21,7 +21,7 @@ module.exports = function getHTML (options, callback) {
     })
 
     response.on('end', function() {
-      printHTML(chunkArray.join(''))
+      callback(chunkArray.join(''))
       console.log('Response stream complete')
     })
   })
