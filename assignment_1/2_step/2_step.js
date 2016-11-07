@@ -2,15 +2,14 @@
 
 const https = require('https');
 
- const requestOptions = {
-    host: 'sytantris.github.io',
-    path: '/http-examples/step2.html'
-  };
 
 function getAndPrintHTML () {
   console.log("Begin process")
   let chunkArray = [];
-
+   const requestOptions = {
+    host: 'sytantris.github.io',
+    path: '/http-examples/step2.html'
+  };
 
   https.get(requestOptions, function(response) {
 
